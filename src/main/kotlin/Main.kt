@@ -64,6 +64,7 @@ fun announcementRequest(client:HttpClient, gson: Gson){
 
 fun createEmail(client: HttpClient, gson: Gson){
     println("Please write your e-mail")
+    println("To return to main menu press 0")
     val email = readln()
     val values = mapOf("emailaddr" to email)
     val request = HttpRequest.newBuilder()
@@ -77,6 +78,7 @@ fun createEmail(client: HttpClient, gson: Gson){
         println("Your e-mail: $email")
     }
     else {
+        if(email=="0") mainMenu(client, gson)
         println("Please give a valid e-mail!")
         createEmail(client,gson)
     }
