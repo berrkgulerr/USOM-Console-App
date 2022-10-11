@@ -8,6 +8,7 @@ import java.net.http.HttpResponse
 import kotlin.system.exitProcess
 
 fun String.utf8(): String = URLEncoder.encode(this, "UTF-8")
+
 fun formData(data: Map<String, String>): HttpRequest.BodyPublisher? {
     val res = data.map {(k, v) -> "${(k.utf8())}=${v.utf8()}"}
         .joinToString("&")
@@ -20,7 +21,7 @@ fun mainMenu(client: HttpClient, gson: Gson){
         println("1- Get Incidents")
         println("2- Get Announcements")
         println("3- Create Email")
-        println("4- Exit!")
+        println("4- Exit")
         when (
            try {
                readLine()?.toInt()
