@@ -16,4 +16,4 @@ If you press 2 in main menu the application will send a GET requet to 'https://w
 If you press 3 in main menu you will be asked to write an email. If you type a valid email application will send a POST request to 'https://www.usom.gov.tr/api/emails/create' with given email, otherwise it gives an error. Pressing 0 will let you return to main menu.
 
 ## Exit
-If you press 4 in main menu, the application exits. 
+If you press 4 in main menu, the application exits.
